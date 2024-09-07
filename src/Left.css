@@ -77,5 +77,48 @@
     .Left h1 {
       font-size: 100px;
     }
+    .Left span {
+        font-size: 16px;
+    }
   }
-
+  @media (max-width: 576px) {
+    .Left h1 {
+      font-size: 70px;
+    }
+    .Left span {
+        font-size: 15px;
+    }
+    .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.me-2.css-20bmp1-MuiSvgIcon-root {
+        height: 18px;
+        width: 18px;
+    }
+    .Left h2 {
+        font-size: 25px;
+      }
+      .Left form label {
+            font-size: 20px;
+            margin-bottom: 10px;
+            
+      }
+      .Left form input {
+        padding: 7px 15px;
+        font-size: 15px;
+        min-width: 270px;
+      }
+      .Left form .Search-city-btn {
+        padding: 7px 11px;
+      }
+      .Left .temp {
+        flex-direction: column;
+      }
+      h2, h3 {
+        font-size: 1.4rem;
+      }
+  }
+  @media (max-width: 375px) {
+    .Left form input {
+        font-size: 13px;
+      width: 140px;
+      min-width: 240px;
+    }
+  }

@@ -43,3 +43,14 @@ a {
       margin-bottom: 60px;
     }
   }
+  
+
+@media (max-width: 767px) {
+  .mb-10 {
+    margin-bottom: 50px;
+
+  }
+  .mb-4 {
+    margin-bottom: 1.1rem !important;
+  }
+}

@@ -5,6 +5,7 @@ import getWeatherInfo from "../assets/getInfo";
 export default function LeftBottom({updateInfo}) {
 
     const [city,setCity] = useState("");
+    const [error,setError] = useState(false);
 
     let handleChange = (e) =>{
         setCity(e.target.value);
@@ -12,22 +13,31 @@ export default function LeftBottom({updateInfo}) {
 
     let handleSubmit = async (e) => {
         e.preventDefault();
+        try {
+            let Info = await getWeatherInfo(city);
+            updateInfo(Info);
+            setError(false);
+            console.log(Info)
+        }
+        catch {
+            setError(true);
+            setTimeout(()=>{
+                setError(false);
+            },2000)
+        }
         setCity("");
-        let Info = await getWeatherInfo(city);
-        updateInfo(Info);
-        console.log(Info)
     }
 
     return (
-        <div className="d-flex justify-content-around mb-10">
+        <div className="d-flex align-items-center mb-10 flex-column">
             <form onSubmit={handleSubmit}>
                 <label htmlFor="city-name">Enter City</label>
                 <div>
                 <input type='text' id="city-name" required value={city} onChange={handleChange} />
                 <button type="submit" className='Search-city-btn'><SearchIcon /></button>
                 </div>
-                
             </form>
+            {error && <p className='text-danger mt-xl-5 mt-3 mb-0' style={{fontSize: "18px"}}>City not present in our Database</p>}
         </div>
     )
 }

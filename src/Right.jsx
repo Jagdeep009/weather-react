@@ -5,7 +5,7 @@ import "./Right.css";
 
 export default function Right({info}) {
     return (
-        <div className="col-xl-3 col-md-4 col-12 Right p-xl-5 p-4 text-center d-flex flex-md-column flex-wrap">
+        <div className="col-xl-3 col-md-4 col-12 Right p-xl-5 p-sm-4 py-4 px-3 text-center d-flex flex-md-column flex-wrap">
             <RightTop />
             <RightMiddle info={info} />
             <RightBottom />

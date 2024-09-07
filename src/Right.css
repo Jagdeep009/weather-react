@@ -10,8 +10,11 @@
 .res-bor {
     border-top:1px solid #696969;
 }
-@media(min-width:768px) {
-    .res-bor {
-        border:0px;
+@media (max-width:576px) {
+    .Right .middle {
+        padding: 0px 10px !important;
+    }
+    .Right .res-bor {
+        flex-direction: column;
     }
 }
