@@ -1,0 +1,17 @@
+.Right {
+    background-color: #F6F6F6;
+}
+.Right .projects a{
+    color: #696969;
+    border: 1px solid #ababab9f;
+    border-radius: 10px;
+    padding: 10px;
+}
+.res-bor {
+    border-top:1px solid #696969;
+}
+@media(min-width:768px) {
+    .res-bor {
+        border:0px;
+    }
+}
