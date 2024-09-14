@@ -1,6 +1,7 @@
+import useInfo from "../Context/InfoContext"
 
-
-export default function LeftMiddle({info} ) {
+export default function LeftMiddle() {
+    const {info} = useInfo()
     return (
         <div className="d-flex justify-content-center align-items-center temp">
             <h1>{info.temp}&deg;</h1>

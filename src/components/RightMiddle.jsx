@@ -1,8 +1,10 @@
 import AirOutlinedIcon from '@mui/icons-material/AirOutlined';
 import WaterDropOutlinedIcon from '@mui/icons-material/WaterDropOutlined';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import useInfo from '../Context/InfoContext';
 
-export default function RightMiddle({info}){
+export default function RightMiddle(){
+    const {info} = useInfo()
     return (
         <div className="mb-md-5 px-4 middle color-grey col-md-12 col-6">
             <ul>

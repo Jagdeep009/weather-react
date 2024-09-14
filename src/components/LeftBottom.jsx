@@ -1,8 +1,11 @@
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 import getWeatherInfo from "../assets/getInfo";
+import useInfo from '../Context/InfoContext';
 
-export default function LeftBottom({updateInfo}) {
+export default function LeftBottom() {
+
+    const {updateInfo} = useInfo()
 
     const [city,setCity] = useState("");
     const [error,setError] = useState(false);

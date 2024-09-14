@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Left from "./Left";
 import Right from "./Right";
 import getWeatherInfo from "./assets/getInfo";
+import { InfoContextProvider } from "./Context/InfoContext";
 
 export default function Weather() {
 
@@ -19,9 +20,11 @@ export default function Weather() {
     },[])
 
     return (
-        <div className="d-flex Weather flex-md-row flex-column">
-            <Left updateInfo={updateInfo} info={info} />
-            <Right info={info} />
-        </div>
+        <InfoContextProvider value={{info,setInfo,updateInfo}}>
+            <div className="d-flex Weather flex-md-row flex-column">
+                <Left />
+                <Right/>
+            </div>
+        </InfoContextProvider>
     )
 }
